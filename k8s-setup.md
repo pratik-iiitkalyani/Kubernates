@@ -59,6 +59,10 @@ Setup Kubernetes (K8s) Cluster on AWS
      11. Create kubernetes cluster definitions on S3 bucket ( create kubernates cluster definition and store in s3 bucket)
      
         ->  kops create cluster --cloud=aws --zones=us-east-1d --name=dev.k8s.pratik.in --dns-zone=pratik.in --dns private
+        
+        *Note - While creating bucket and dns private zone the extension name should be same like pratik.in otherwise it gives error
+        
+     12. 
 
         
         
