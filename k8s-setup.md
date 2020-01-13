@@ -52,5 +52,10 @@ Setup Kubernetes (K8s) Cluster on AWS
      
         -> export KOPS_STATE_STORE=s3://dev.k8s.pratik.in
         
+     10. Create ssh keys before creating cluster
+        
+        -> ssh-keygen
+        
+     11. 
         
         
