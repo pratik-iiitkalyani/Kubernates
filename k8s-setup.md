@@ -12,3 +12,5 @@ Setup Kubernetes (K8s) Cluster on AWS
         #sudo apt-get install unzip - if you dont have unzip in your system
         -> ls -l (run to see awscli-bundle is unzipped or not)
         -> ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+        
+        -> aws (run to see aws cli is installed or not)
