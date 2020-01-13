@@ -56,7 +56,8 @@ Setup Kubernetes (K8s) Cluster on AWS
         
         -> ssh-keygen
         
-     11. Create kubernetes cluster definitions on S3 bucket ( create kubernates cluster definition and store in s3 bucket)
+     11. Create kubernetes cluster definitions on S3 bucket ( create kubernates cluster definition and store all 
+         configuration in s3 bucket)
      
         ->  kops create cluster --cloud=aws --zones=us-east-1d --name=dev.k8s.pratik.in --dns-zone=pratik.in --dns private
         
