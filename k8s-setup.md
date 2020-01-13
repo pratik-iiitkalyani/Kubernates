@@ -71,7 +71,10 @@ Setup Kubernetes (K8s) Cluster on AWS
         -> edit your master instance group: kops edit ig --name=dev.k8s.pratik.in master-us-east-1d
 
         
-     12. 
+     12. Create kubernetes cluster
+     
+        -> kops update cluster dev.k8s.pratik.in --yes
+        (* if we execute without --yes, it will not create cluster it just show us what all activity it can do
 
         
         
