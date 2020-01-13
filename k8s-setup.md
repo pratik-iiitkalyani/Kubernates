@@ -25,7 +25,17 @@ Setup Kubernetes (K8s) Cluster on AWS
           
      4. Create an IAM user/role with Route53, EC2, IAM and S3 full access
      
-     5. 
+     5. Attach IAM role to ubuntu server
+        
+        Note: If you create IAM user with programmatic access then provide Access keys.
+        -> aws s3 ls (to see your bucket and verify that given role have access to s3 or not)
+        -> aws configure
+        (* don't provide Access Key ID and Secret Access Key because currently we are using role
+         * provide your region and output leave as default)
+         
+         *Note - if your region is us-east-1d - provide region as us-east-1
+         
+     6. 
         
         
         
