@@ -75,6 +75,14 @@ Setup Kubernetes (K8s) Cluster on AWS
      
         -> kops update cluster dev.k8s.pratik.in --yes
         (* if we execute without --yes, it will not create cluster it just show us what all activity it can do
+        
+     13. Validate your cluster
+     
+        -> kops validate cluster
+        
+     14. To get list of nodes
+     
+        -> kubectl get nodes 
 
         
         
