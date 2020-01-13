@@ -48,5 +48,9 @@ Setup Kubernetes (K8s) Cluster on AWS
      
         -> aws s3 mb s3://dev.k8s.pratik.in
         
+     9. Expose environment variable (expose our S3 Bucket)
+     
+        -> export KOPS_STATE_STORE=s3://dev.k8s.pratik.in
+        
         
         
