@@ -44,7 +44,9 @@ Setup Kubernetes (K8s) Cluster on AWS
      7. Create a Route53 private hosted zone
         ( * we can create Public hosted zone if you have a domain)
 
-     8. 
+     8. create an S3 bucket
+     
+        -> aws s3 mb s3://dev.k8s.pratik.in
         
         
         
