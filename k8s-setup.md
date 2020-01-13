@@ -14,3 +14,13 @@ Setup Kubernetes (K8s) Cluster on AWS
         -> ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
         
         -> aws (run to see aws cli is installed or not)
+        
+    
+     3. install kubectl (Kubectl is a command line interface for running commands against Kubernetes clusters)
+     
+        -> curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-                   release/release/stable.txt)/bin/linux/amd64/kubectl
+          chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl
+        
+        
+        
