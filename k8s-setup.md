@@ -40,6 +40,11 @@ Setup Kubernetes (K8s) Cluster on AWS
         -> curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s                                                                https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
          chmod +x kops-linux-amd64
          sudo mv kops-linux-amd64 /usr/local/bin/kops
+         
+     7. Create a Route53 private hosted zone
+        ( * we can create Public hosted zone if you have a domain)
+
+     8. 
         
         
         
