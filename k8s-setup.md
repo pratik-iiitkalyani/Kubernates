@@ -63,6 +63,14 @@ Setup Kubernetes (K8s) Cluster on AWS
         
         *Note - While creating bucket and dns private zone the extension name should be same like pratik.in otherwise it gives error
         
+        we can execute this command to know more about cluster 
+        
+        -> list clusters with: kops get cluster
+        -> edit this cluster with: kops edit cluster dev.k8s.pratik.in
+        -> edit your node instance group: kops edit ig --name=dev.k8s.pratik.in nodes
+        -> edit your master instance group: kops edit ig --name=dev.k8s.pratik.in master-us-east-1d
+
+        
      12. 
 
         
