@@ -116,5 +116,11 @@ Load br_netfilter module
 sudo lsmod | grep br_netfilter
 ```
 
+# Configure Kubernetes Master node
+First we we need to get all the images that are going to be used during kubernetes initialization. It is optional and kubeadm will automatically pull it during initialization. But best practice is to first get the images so you don't have to worry about images.
+
+```
+sudo kubeadm config images pull
+```
 
 
