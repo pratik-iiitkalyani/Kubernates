@@ -70,5 +70,36 @@ After the installation is completed, enable kubelet as a service.
 sudo systemctl enable kubelet && sudo systemctl start kubelet
 ```
 
+# Master node setup
+Allow 6443 and 10250 from firewalld on master node
+
+```
+sudo firewall-cmd --permanent --add-port=6443/tcp && sudo firewall-cmd --permanent --add-port=10250/tcp && sudo firewall-cmd --reload
+```
+
+NOTE: If you do not execute above commands, you would see below warning during Kubernetes initialization.
+[WARNING Firewalld]: firewalld is active, please ensure ports [6443 10250] are open or your cluster may not function correctly
+error execution phase preflight: [preflight] Some fatal errors occurred:
+
+Set IPTables settings
+
+```
+sudo bash -c 'cat <<EOF >  /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF'
+```
+
+Apply changes by execute below command
+
+```
+sudo sysctl --system
+```
+
+Load br_netfilter module
+```
+sudo lsmod | grep br_netfilter
+```
+
 
 
