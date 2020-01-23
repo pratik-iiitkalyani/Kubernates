@@ -31,5 +31,38 @@ To verify if you have docker version 1.13 and higher, execute below command
 sudo docker version
 ```
 
+# Install Kubernetes packages
+In order to grab latest package for Kubernetes, we need to configure our yum repository
+
+```
+sudo bash -c 'cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+exclude=kube*
+EOF'
+```
+
+Disable SELinux to prevent any communication issues on all the nodes
+
+```
+sudo setenforce 0
+sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+```
+
+```
+sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+```
+
+After the installation is completed, enable kubelet as a service.
+
+```
+sudo systemctl enable kubelet && sudo systemctl start kubelet
+```
+
 
 
