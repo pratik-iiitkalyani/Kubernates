@@ -3,6 +3,12 @@ Setup Kubernetes Cluster on CentOS 7
 
 # Prerequisites
   - Swap should be disabled
+  - Disable swap
+  
+  ```
+  sed -i '/swap/d' /etc/fstab
+  swapoff -a
+  ```
   
 # System updates
 update our Linux system with all security patches or any other upgrades that will be ensure our system is up-to-date.
