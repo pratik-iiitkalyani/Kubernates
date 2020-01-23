@@ -13,7 +13,7 @@ Setup Kubernetes Cluster on CentOS 7
 # System updates
 update our Linux system with all security patches or any other upgrades that will be ensure our system is up-to-date.
 ```
-yum update -y
+sudo yum update -y
 ```
 After system update, we are now ready to setup Kubernetes cluster. We will first setup docker and then setup Kubernetes
 
@@ -23,7 +23,7 @@ Please ensure you have applied following steps to both master and worker node be
 # Install and Setup Docker
 
 ```
-yum install -y docker
+sudo yum install -y docker
 ```
 
 Now we need to enable and start Docker as a service
@@ -80,6 +80,21 @@ sudo firewall-cmd --permanent --add-port=6443/tcp && sudo firewall-cmd --permane
 NOTE: If you do not execute above commands, you would see below warning during Kubernetes initialization.
 [WARNING Firewalld]: firewalld is active, please ensure ports [6443 10250] are open or your cluster may not function correctly
 error execution phase preflight: [preflight] Some fatal errors occurred:
+
+NOTE: if you are getting error while excuting above command, Please enable firewalld
+Enable Firewalld
+```
+systemctl enable firewalld
+```
+Start Firewalld
+```
+systemctl start firewalld
+```
+Check the Status of Firewalld
+```
+systemctl status firewalld
+```
+
 
 Set IPTables settings
 
