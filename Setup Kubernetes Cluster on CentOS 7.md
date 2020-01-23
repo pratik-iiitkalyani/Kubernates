@@ -9,4 +9,5 @@ update our Linux system with all security patches or any other upgrades that wil
 ```
 yum update -y
 ```
+After system update, we are now ready to setup Kubernetes cluster. We will first setup docker and then setup Kubernetes.
 
