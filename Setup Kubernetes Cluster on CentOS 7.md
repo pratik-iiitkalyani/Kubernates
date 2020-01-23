@@ -82,15 +82,15 @@ NOTE: If you do not execute above commands, you would see below warning during K
 error execution phase preflight: [preflight] Some fatal errors occurred:
 
 NOTE: if you are getting error while excuting above command, Please enable firewalld
-Enable Firewalld
+- Enable Firewalld
 ```
 systemctl enable firewalld
 ```
-Start Firewalld
+- Start Firewalld
 ```
 systemctl start firewalld
 ```
-Check the Status of Firewalld
+- Check the Status of Firewalld
 ```
 systemctl status firewalld
 ```
